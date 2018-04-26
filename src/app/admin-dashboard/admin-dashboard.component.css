@@ -1,0 +1,21 @@
+.dashboard{
+  -webkit-transition: all .3s ease-out;
+  /*-moz-transition: all .3s ease-out;*/
+  /*-o-transition: all .3s ease-out;*/
+  /*-ms-transition: all .3s ease-out;*/
+  transition: all .3s ease-out;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+  background: #fff;
+  border-radius: 6px;
+  padding: 30px 0px;
+  margin-bottom: 20px;
+  height: 205px;
+  text-align: center;
+  margin-top: 4%;
+  border: gray;
+  margin-right: 8%;
+}
+label{
+  font-size: 18px;
+  margin-top: 20%;
+}

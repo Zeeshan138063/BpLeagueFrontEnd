@@ -1,0 +1,66 @@
+<app-header1></app-header1>
+<mat-card>
+  <mat-card-header >
+    <!--<img style="width: 80px" height="80px" src="../../assets/title_logo.png">-->
+  </mat-card-header>
+  <mat-card-header>
+
+  </mat-card-header>
+  <mat-card-title>
+    Log In
+  </mat-card-title>
+
+  <!--content are here-->
+  <mat-card-content>
+    <form class="demo-form">
+      <table>
+        <tr>
+          <td>
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="Email Address" [formControl]="emailFormControl"
+                     [errorStateMatcher]="matcher"
+                     required>
+              <!--<mat-hint>Error appera Instat</mat-hint>-->
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')" >
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <mat-form-field>
+              <input type="password" matInput placeholder="Password">
+            </mat-form-field>
+          </td>
+        </tr>
+        <br>
+
+        Recover your ?  <a routerLinkActive="menu-link-active"   routerLink="/forget">password </a>
+        <br>
+        <br>
+        <tr>
+          <td>
+            <button mat-raised-button routerLink='/dashboard'>
+              Login
+            </button>
+            <button mat-raised-button>
+              Reset
+            </button>
+
+          </td>
+        </tr>
+
+
+
+
+      </table>
+    </form>
+  </mat-card-content>
+
+
+</mat-card>

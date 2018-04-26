@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeagueOwnerComponent } from './league-owner.component';
+import { RequestedWriterComponent } from './requested-writer.component';
 
-describe('LeagueOwnerComponent', () => {
-  let component: LeagueOwnerComponent;
-  let fixture: ComponentFixture<LeagueOwnerComponent>;
+describe('RequestedWriterComponent', () => {
+  let component: RequestedWriterComponent;
+  let fixture: ComponentFixture<RequestedWriterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeagueOwnerComponent ]
+      declarations: [ RequestedWriterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeagueOwnerComponent);
+    fixture = TestBed.createComponent(RequestedWriterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,7 +9,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   ErrorStateMatcher,
   MatButtonModule,
-  MatCardModule, MatDatepickerModule,
+  MatCardModule,
+  MatDatepickerModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -20,12 +21,15 @@ import {
   MatSelectModule,
   MatSlideToggleModule,
   MatDividerModule,
-  MatToolbarModule, ShowOnDirtyErrorStateMatcher
+  MatToolbarModule,
+  ShowOnDirtyErrorStateMatcher,
+  MatTabsModule,
+  MatDialogModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RefreeComponent } from './refree/refree.component';
 import {AppRoutingModule} from './app.routing';
-import { LeagueOwnerComponent } from './league-owner/league-owner.component';
+//import { LeagueOwnerComponent } from './league-owner/league-owner.component';
 import { SportsWriterComponent } from './sports-writer/sports-writer.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
@@ -35,11 +39,23 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { OwnerNavbarComponent } from './owner-navbar/owner-navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OwnerProfileComponent } from './owner-profile/owner-profile.component';
-import { LeagueComponent } from './league/league.component';
-import { MatchComponent } from './match/match.component';
+import { LeagueComponent } from './owner-league/league.component';
+import { MatchComponent } from './owner-match/match.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { RequestedOwnerComponent } from './requested-owner/requested-owner.component';
+import { RequestedRefreeComponent } from './requested-refree/requested-refree.component';
+import { RequestedAnalyistComponent } from './requested-analyist/requested-analyist.component';
+import { RequestedWriterComponent } from './requested-writer/requested-writer.component';
+import { RegisteredWriterComponent } from './registered-writer/registered-writer.component';
+import { RegisteredAnalyistComponent } from './registered-analyist/registered-analyist.component';
+import { RegisteredRefreeComponent } from './registered-refree/registered-refree.component';
+import { RegisteredOwnerComponent } from './registered-owner/registered-owner.component';
+import {Ng2SmartTableModule} from 'ng2-smart-table';
 
 
 @NgModule({
@@ -47,7 +63,7 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     SignUpComponent,
     RefreeComponent,
-    LeagueOwnerComponent,
+    // LeagueOwnerComponent,
     SportsWriterComponent,
     AboutComponent,
     LoginComponent,
@@ -61,9 +77,21 @@ import { ContactComponent } from './contact/contact.component';
     MatchComponent,
     TournamentComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent,
+    AdminComponent,
+    AdminDashboardComponent,
+    RequestedOwnerComponent,
+    RequestedRefreeComponent,
+    RequestedAnalyistComponent,
+    RequestedWriterComponent,
+    RegisteredWriterComponent,
+    RegisteredAnalyistComponent,
+    RegisteredRefreeComponent,
+    RegisteredOwnerComponent
   ],
   imports: [
+    Ng2SmartTableModule,
     AppRoutingModule,
     BrowserModule,
     FormsModule,
@@ -83,6 +111,8 @@ import { ContactComponent } from './contact/contact.component';
     MatDividerModule,
     MatOptionModule,
     MatSlideToggleModule,
+    MatTabsModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
@@ -99,7 +129,8 @@ import { ContactComponent } from './contact/contact.component';
     MatSelectModule,
     MatOptionModule,
     MatDividerModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTabsModule
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}

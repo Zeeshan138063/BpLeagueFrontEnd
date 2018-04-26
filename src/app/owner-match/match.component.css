@@ -1,0 +1,17 @@
+.ownertextDiv{
+  border: solid  ;
+  text-align: center;
+font-family: SansSerif  , Times, serif;
+  font-size: 30vw;
+}
+#leage{
+  padding: 12%;
+}
+#tab{
+  margin-top: 12%;
+  margin-right: 6%;
+}
+.btn-info{
+  width: 50%;
+  font-size: 32px;
+}

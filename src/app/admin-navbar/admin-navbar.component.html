@@ -1,4 +1,49 @@
 
+<!--<div class="bg">-->
+  <!--<mat-toolbar  >-->
+
+    <!--<span ><img src="../../assets/title_logo.png" routerLink="" height="60" width="60"/></span>-->
+
+    <!--<span class="example-fill-remaining-space"></span>-->
+
+    <!--<button mat-button [matMenuTriggerFor]="menu">Owner</button>-->
+    <!--<mat-menu #menu="matMenu">-->
+      <!--<button mat-menu-item>Registered an Owner</button>-->
+      <!--<button mat-menu-item>Requested Owner</button>-->
+      <!--<button mat-menu-item>Certified Owner</button>-->
+    <!--</mat-menu>-->
+
+
+    <!--<button mat-button [matMenuTriggerFor]="menu">Refree</button>-->
+    <!--<mat-menu #menu="matMenu">-->
+      <!--<button mat-menu-item>Registered an Refree</button>-->
+      <!--<button mat-menu-item>Requested Refree</button>-->
+      <!--<button mat-menu-item>Certified Refree</button>-->
+    <!--</mat-menu>-->
+
+    <!--<button mat-button [matMenuTriggerFor]="menu">Sports Writer</button>-->
+    <!--<mat-menu #menu="matMenu">-->
+      <!--<button mat-menu-item>Registered an Sports Writer</button>-->
+      <!--<button mat-menu-item>Requested Sports Writer</button>-->
+      <!--<button mat-menu-item>Certified Sports Writer</button>-->
+    <!--</mat-menu>-->
+
+    <!--<button mat-button [matMenuTriggerFor]="menu">Analyist</button>-->
+    <!--<mat-menu #menu="matMenu">-->
+      <!--<button mat-menu-item>Registered an Analyist</button>-->
+      <!--<button mat-menu-item>Requested Analyist</button>-->
+      <!--<button mat-menu-item>Certified Analyist</button>-->
+    <!--</mat-menu>-->
+    <!--<button mat-button routerLink='/login'>Logout</button>-->
+  <!--</mat-toolbar>-->
+
+<!--</div>-->
+<!--&lt;!&ndash;<router-outlet></router-outlet>&ndash;&gt;-->
+
+
+
+
+
 
 <div class="bg">
   <mat-toolbar  >
@@ -6,13 +51,37 @@
     <span ><img src="../../assets/title_logo.png" routerLink="" height="60" width="60"/></span>
 
     <span class="example-fill-remaining-space"></span>
-    <a mat-button routerLink="about" routerLinkActive="menu-link-active"> PROFILE </a>
-    <a mat-button routerLink="league_owner" routerLinkActive="menu-link-active">LEAGUES</a>
-    <a mat-button routerLinkActive="menu-link-active" routerLink="refree">MATCHES</a>
-    <a mat-button routerLink="login" routerLinkActive="menu-link-active">TOURNAMENTS</a>
-    <a mat-button routerLinkActive="menu-link-active" routerLink="/register">BLOG</a>
-    <a mat-button routerLinkActive="menu-link-active" routerLink="/register">CONTACT</a>
 
+    <button mat-button [matMenuTriggerFor]="menuOwner">League Owner</button>
+    <mat-menu #menuOwner="matMenu">
+      <button mat-menu-item routerLink="/registered-owner">Registerd League Owner</button>
+      <button mat-menu-item routerLink="/requested-owner">Requested League Owner</button>
+      <!--<button mat-menu-item>Certified Owner</button>-->
+    </mat-menu>
+
+
+    <button mat-button [matMenuTriggerFor]="menuRefree">Refree</button>
+    <mat-menu #menuRefree="matMenu">
+      <button mat-menu-item routerLink='/registered-refree'>Registerd Refree</button>
+      <button mat-menu-item routerLink='/requested-refree'>Requested Refree</button>
+      <!--<button mat-menu-item>Certified Refree</button>-->
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menuWriter">Sports Writer</button>
+    <mat-menu #menuWriter="matMenu">
+      <!--<li  class="dropdown-content" ><a style="color: #7d7d7d" routerLink="/login">Schedule Inspection</a></li>-->
+      <button mat-menu-item routerLink="/registered-writer">Registered Sports Writer</button>
+      <button mat-menu-item routerLink="/requested-writer">Requested Sports Writer</button>
+      <!--<button mat-menu-item>Certified Sports Writer</button>-->
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menuAnalyist">Analyist</button>
+    <mat-menu #menuAnalyist="matMenu">
+      <button mat-menu-item routerLink="/registered-analyist">Registered Analyist</button>
+      <button mat-menu-item routerLink="/requested-analyist">Requested Analyist</button>
+      <!--<button mat-menu-item>Certified Analyist</button>-->
+    </mat-menu>
+    <button mat-button routerLink='/login'>Logout</button>
   </mat-toolbar>
 
 </div>

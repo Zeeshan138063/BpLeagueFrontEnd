@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('bp-league App', () => {
+describe('bp-owner-league App', () => {
   let page: AppPage;
 
   beforeEach(() => {
